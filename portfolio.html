@@ -10,27 +10,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body id="home">
     <div class="filter-body"><img src="/img/Cuadrícula-H.png" alt="Cuadricula"></div>
-    <section id="portfolio">
-      <!-- Navegation -->
-              <nav>
+          <!-- Navegation -->
+          <nav>
             <ul>
-              <a href="#portfolio"><li><img src="logo/4.png" alt="logo-TX"></li></a>
+              <a href="#home"><li class="home"><img src="logo/4.png" alt="logo-TX"></li></a> <!-- Inicio -->
               <a href="#skills"><li>Habilidades</li></a>
               <a href="#about-me"><li>Sobre mi</li></a>
-              <!-- <a href="#skills"><li>Proyectos</li></a> -->
+              <a href="#logros"><li>Certificados</li></a>
+              <a href="#projects"><li>Proyectos</li></a>
             </ul>
           </nav>
-
+    <section id="portfolio">
     <section id="portfolio-content">
         <div class="data-home">
-          <div>
+          <div class="container-avatar">
             <img
               src="/img/Avatar/A1.png"
               alt="Avatar TECNIMUX"
               class="avatar"
             />
+            </div>
+            <div>
             <h2>
               <a href="https://tecnimux.com" class="link-underline">
                 <span>@</span>TECNIMUX</a>
@@ -53,6 +55,7 @@
     </section>
 
     <section id="skills">
+      <div class="vertical-line"></div>
       <h1>Mis conocimientos</h1>
 <div class="container-knowledge">
       <div class="icons-imgs"><img src="logos-tech/Unofficial_JavaScript_logo_2.svg.png" alt=""><p>JS</p></div>
@@ -69,6 +72,31 @@
     <img src="https://software.sites.unc.edu/wp-content/uploads/sites/8/2014/12/Adobe-Creative-Cloud-small.png" alt="Adoebe Illustrator">  
     <p>Premiere, illustrator, photoshop.</p>
   </div> -->
+    </section>
+
+    <section id="logros">
+      <h1>Logros - Reconocimientos - Certificados</h1>
+      <div class="container-certificados">
+        <div class="cert">
+          <div class="show"><h2>DISEÑO</h2></div>
+          <img src="certificados/DIPLOMADO EN DISEÑO DIGITAL/ALEJANDRO-BEDOYA.png" alt="Diplomado DISEÑO DIGITAL" class="cert-imgs">
+        </div>
+
+        <div class="cert">
+                    <div class="show"><h2>WEB</h2></div>
+          <img src="certificados/CURSO DESARROLLO WEB FRONT-END WEB DEVELOPER/UC-e28c150e-67ff-45e5-9442-ebb56bc3ab71.jpg" alt="Curso DESARROLLO WEB" class="cert-imgs">
+        </div>
+
+        <div class="cert">
+                    <div class="show"><h2>EN</h2></div>
+          <img src="certificados/CURSO INGLES/16343_1033684858_ENTRY_BOG4-H57-G25-1.png" alt="Curso INGLES" class="cert-imgs">
+        </div>
+
+        <div class="cert">
+                    <div class="show"><h2>JS</h2></div>
+          <img src="certificados/CURSO JS 50H/constancias14-1.png" alt="Curso JAVASCRIPT 50 HORAS" class="cert-imgs">
+        </div>
+      </div>
     </section>
     
               <!-- About me -->
