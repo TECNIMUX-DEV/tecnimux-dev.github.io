@@ -1,3 +1,4 @@
+// Add type of language
 let languageState = document.getElementById('language-state')
 function changeTextES () {
     languageState.innerHTML = 'Español';
@@ -14,7 +15,7 @@ en.addEventListener('click', (changeTextEN))
 
 
 
-
+// Hidden nav language
 let hL = function hiddenLanguage () {
     if (window.scrollY > 1) {
             language.style.opacity = '0';
@@ -30,3 +31,22 @@ let hL = function hiddenLanguage () {
 let language = document.getElementById('language')
 window.addEventListener('scroll', (hL))
 
+
+let contentSkill = document.getElementById('content-skill')
+function showTap() {
+    contentSkill.style.display = 'block';
+}
+
+
+let hT = function HiddenShowTap() {
+    contentSkill.style.display = 'none';
+}
+    window.addEventListener('click', (hT))
+
+
+    // let sideRight = document.getElementById('portfolio')
+
+    // let hR = function hiddeSideR() {
+    //     sideRight.classList.add('hidden-side-Right');
+    // }
+    // sideRight.addEventListener('mousemove', (hR))
