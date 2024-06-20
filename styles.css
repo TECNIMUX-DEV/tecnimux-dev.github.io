@@ -5,6 +5,10 @@
   color: #fff;
   scroll-behavior: smooth;
 }
+@font-face {
+  font-family: 'P';
+  src: url(fonts/Azonix-1VB0.otf);
+}
 html, body {
   display: flex;
   flex-direction: column;
@@ -606,13 +610,24 @@ margin-top: auto;
 
 .projects {
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   text-align: center;
   margin: 0.5rem;
 }
+.title-project {
+  display: flex;
+    height:400px;
+  width: 500px;
+  background-color: red;
+  font-size: 4rem;
+  text-align: center;
+  align-items: center;
+  font-family: 'P';
+  }
+
 .project {
   height: 500px;
 width: 700px;
