@@ -1,10 +1,10 @@
 // Add type of language
 let languageState = document.getElementById('language-state')
 function changeTextES () {
-    languageState.innerHTML = 'Español';
+    languageState.innerHTML = 'Español 🇪🇸';
 }
 function changeTextEN () {
-    languageState.innerHTML = 'English';
+    languageState.innerHTML = 'English 🇺🇸';
 }
 
 
@@ -32,17 +32,30 @@ let language = document.getElementById('language')
 window.addEventListener('scroll', (hL))
 
 
-let contentSkill = document.getElementById('content-skill')
+let contentSkill = document.getElementById('content-skill') 
+    let contentSkillHTML = document.getElementById('content-skill-HTML')
+
 function showTap() {
     contentSkill.style.display = 'block';
-}
+    }
 
 
-let hT = function HiddenShowTap() {
-    contentSkill.style.display = 'none';
-}
-    window.addEventListener('click', (hT))
+function showTapHTML() {
+    contentSkillHTML.style.display = 'block';
+    }
 
+
+
+// let hT = function HiddenShowTap() {
+//     contentSkill.style.display = 'none';
+//     contentSkillHTML.style.display = 'none';
+// }
+//     window.addEventListener('click', (hT))
+
+    function removeBoxContentSkill() {
+        contentSkill.style.display = 'none';
+        contentSkillHTML.style.display = 'none';
+    }
 
     // let sideRight = document.getElementById('portfolio')
 
