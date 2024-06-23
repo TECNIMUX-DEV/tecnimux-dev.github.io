@@ -165,7 +165,9 @@ button {
   height: 100%;
   width: 100%;
   opacity: 0.2;
+  background-attachment: fixed;
 }
+
 #portfolio {
   display: flex;
   justify-content: center;
@@ -633,19 +635,22 @@ margin-top: auto;
   flex-wrap: wrap-reverse;
   gap: 0.5rem;
   text-align: center;
-  margin: 0.5rem;
+  margin: 2rem;
+  border-radius: 20px;
+}
+.rotate-side {
+  flex-direction: row-reverse;
 }
 .title-project {
   display: flex;
-    height:400px;
-  width: 500px;
+  height: 400px;
+  width: 450px;
   background-color: red;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   align-items: center;
   font-family: 'Pt';
   }
-
 .project {
   height: 500px;
 width: 700px;
@@ -655,4 +660,8 @@ background-color: red;
 height: 60px;
 width: 100%;
 background-color: rgb(0, 0, 0);
+}
+.description-project {
+  font-size: 1.3rem;
+  font-weight: 100;
 }
