@@ -521,6 +521,20 @@ margin-top: auto;
   animation: cursor-exp 1s ease forwards;
   animation-delay: 1s;
  }
+ /* .filter-cert {
+  z-index: -1;
+  text-align: center;
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  /* background: radial-gradient(circle, #202020,#111111);
+  background-color: #ff0000;
+  transition:  1s ease-in;
+  cursor: default;
+  animation: cursor-exp 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0.5;
+ } */ 
  /* .showTwo {
   text-align: center;
   position: absolute;
@@ -571,6 +585,7 @@ margin-top: auto;
  }
  .show:hover h3 {
   color: transparent;
+  user-select: none;
  }
  .cert {
   position: relative;
