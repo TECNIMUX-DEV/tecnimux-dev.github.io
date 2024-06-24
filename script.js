@@ -63,3 +63,15 @@ function showTapHTML() {
     //     sideRight.classList.add('hidden-side-Right');
     // }
     // sideRight.addEventListener('mousemove', (hR))
+
+
+
+let resizeImgs = document.getElementById('resize-imgs')
+let show = document.getElementById('show')
+show.addEventListener( 'click', function(){
+let certImgs = document.querySelectorAll('.cert-imgs')
+certImgs.forEach(function(img){
+img.style.width = '500px';
+img.style.height = 'auto';
+});
+});

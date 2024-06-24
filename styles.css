@@ -108,6 +108,13 @@ button {
   font-size: 0.7rem;
   margin: 0;
 }
+#languages button strong {
+color: #9c9c9c;
+opacity: 0.5;
+}
+.state-active {
+  opacity: 0.5;
+}
 /* #language:hover {
   transform: scale(none);
 } */
@@ -493,8 +500,8 @@ margin-top: auto;
 }
 
  #logros h2 {
-  margin: 2rem;
   font-weight: 400;
+  margin: 2rem;
  }
  .container-certificados {
   display: flex;
@@ -502,7 +509,7 @@ margin-top: auto;
   gap: 5px;
   flex-wrap: wrap;
  }
- #show {
+ .show {
   text-align: center;
   position: absolute;
   height: 100%;
@@ -510,6 +517,35 @@ margin-top: auto;
   /* background: radial-gradient(circle, #202020,#111111); */
   background-color: #0f0f0f;
   transition:  1s ease-in;
+  cursor: default;
+  animation: cursor-exp 1s ease forwards;
+  animation-delay: 1s;
+ }
+ /* .showTwo {
+  text-align: center;
+  position: absolute;
+  height: 100%;
+  width: 500px;
+  /* background: radial-gradient(circle, #202020,#111111);
+  background-color: #0f0f0f;
+  transition:  1s ease-in;
+  cursor: default;
+  animation: cursor-exp 1s ease forwards;
+  animation-delay: 1s;
+ }
+ .certTwo {
+  position: relative;
+  padding: 1px;
+ }
+ .cert-imgsTwo {
+  height: auto;
+  width: 500px;
+ } */
+
+ @keyframes cursor-exp {
+  to {
+    cursor: cell;
+  }
  }
  @keyframes breathe {
   from {
@@ -519,7 +555,7 @@ margin-top: auto;
     opacity: 1;
    }
  }
- #show h2 {
+ .title-cert {
   height: 100%;
   display: flex;
   align-items: center;
@@ -530,10 +566,10 @@ margin-top: auto;
   margin: 0;
   padding: 0;
  }
- #show:hover {
+ .show:hover {
   background-color: transparent;
  }
- #show:hover h2 {
+ .show:hover h3 {
   color: transparent;
  }
  .cert {
