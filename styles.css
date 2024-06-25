@@ -196,6 +196,21 @@ opacity: 0.5;
     background-color: #00000015;
 backdrop-filter: blur(3px);
 }
+@media screen and(max-width: 1200px){
+  #portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      animation: tat 0.5s ease-in-out forwards;
+      animation-delay: 1s;
+      padding: 0;
+      background-color: #00000015;
+  backdrop-filter: blur(3px);
+  }
+}
 
 #portfolio-content {
 background-color: #00000015;
@@ -420,11 +435,26 @@ padding: 1rem 0;
 
 .container-knowledge {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    gap: 10px;
+    gap: 3rem;
     flex-wrap: wrap;
+}
+.learned {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+  gap: 1rem;
+}
+.learned h2 {
+font-size: 0.8rem;
+color: beige;
+padding: 0.5rem;
+background-color: rgba(100, 64, 146, 0.2);
+border-radius: 1rem;
+font-weight: 100;
 }
 .icons-imgs {
     width: 100%;
@@ -692,7 +722,7 @@ margin-top: auto;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap-reverse;
-  gap: 1.5rem;
+  gap: 1rem;
   text-align: center;
   margin: 2rem;
   border-radius: 20px;
@@ -714,7 +744,7 @@ margin-top: auto;
   height: 500px;
 width: 700px;
 background-color: rgb(10, 10, 10);
-border-radius: 0.5rem ;
+border-radius: 0.5rem;
 }
 .project p {
   font-family: 'Teachers';
@@ -747,7 +777,6 @@ padding: 1rem;
 .font-dater {
 font-family: 'DATER';
 background-color: #0000006e;
-
 border-radius: 2rem;
 }
 .container-img-dater {
