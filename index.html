@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css"/>
     <!-- Google fonts - Teachers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
   <body id="home">
     <div class="filter-body"><img src="/img/Cuadrícula-H.png" alt="Cuadricula"></div>
           <!-- Navegation -->
-          <nav>
+          <nav id="nav-home">
             <ul>
               <a href="#home"><li class="home"><img src="logo/4.png" alt="logo-TX"></li></a> <!-- Inicio -->
               <a href="#skills"><li>Habilidades</li></a>
@@ -23,13 +23,18 @@
               <a href="#projects"><li>Proyectos</li></a>
               <li id="language"><p id="language-state"></p>
               <ul id="languages">
-                <a href="/es/index.html"><li><button id="es" translate="no">ES</button></li></a>
+                <div class="languages" id="img-languages">
+                <img src="/navegation/icons8-language-100.png" alt="Language">
+              </div>
+                <div id="options-languages">
+                <a href="/index.html"><li><button id="es" translate="no">ES</button></li></a>
                 <a href="/en/index.html"><li><button id="en" translate="no">EN</button></li></a>
+              </div>
               </ul>
             </li>
             </ul>
           </nav>
-    <section id="portfolio">
+    <section id="portfolio" class="container-portfolio" >
     <section id="portfolio-content">
         <div class="data-home">
           <div class="container-avatar">
@@ -142,7 +147,8 @@
                   </p>
                 </div>
                 </div>
-                <h2>Mi IDE preferido VScode</h2>
+
+                  <h2><span>Mi IDE preferido VScode<img src="/logos-tech/Visual_Studio_Code_1.35_icon.svg.png" alt="Image IDE visual studio code" class="ide"></span></h2>
               </section>
               <section id="projects">
                 <h2>Proyectos</h2>

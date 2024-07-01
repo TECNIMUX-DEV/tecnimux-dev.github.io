@@ -7,6 +7,13 @@ function changeTextEN () {
     languageState.innerHTML = 'English 🇺🇸';
 }
 
+let imgLanguage = document.getElementById('img-languages')
+let optionsLanguages = document.getElementById('options-languages')
+imgLanguage.addEventListener('click', showOptions)
+function showOptions() {
+    imgLanguage.style.display = 'none'
+    optionsLanguages.style.display = 'inline-flex'
+}
 
 let es = document.getElementById('es')
 let en = document.getElementById('en')
@@ -45,7 +52,7 @@ function showTapHTML() {
     }
 
 
-
+// Click on skills
 // let hT = function HiddenShowTap() {
 //     contentSkill.style.display = 'none';
 //     contentSkillHTML.style.display = 'none';
@@ -57,21 +64,22 @@ function showTapHTML() {
         contentSkillHTML.style.display = 'none';
     }
 
-    // let sideRight = document.getElementById('portfolio')
+    // Hidden side rigth
+     let containerPortfolio = document.getElementById('portfolio')
+     let hR = function hiddeSideR() {
+         containerPortfolio.classList.add('container-portfolio')
+         containerPortfolio.classList.add('container-portfolio-animation')
+     }
+    window.addEventListener('mousemove', (hR))
 
-    // let hR = function hiddeSideR() {
-    //     sideRight.classList.add('hidden-side-Right');
-    // }
-    // sideRight.addEventListener('mousemove', (hR))
-
-
-
-let resizeImgs = document.getElementById('resize-imgs')
-let show = document.getElementById('show')
-show.addEventListener( 'click', function(){
-let certImgs = document.querySelectorAll('.cert-imgs')
-certImgs.forEach(function(img){
-img.style.width = '500px';
-img.style.height = 'auto';
-});
-});
+    // Add styles nav
+    let navHome = document.getElementById('nav-home')
+    let hS = function addStylesNav() {
+        if (window.scrollY > 1) {
+            navHome.classList.add('nav-style')
+    }
+    else {
+        navHome.classList.remove('nav-style')
+    }
+    }
+    window.addEventListener('scroll', (hS))
