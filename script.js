@@ -83,3 +83,20 @@ function showTapHTML() {
     }
     }
     window.addEventListener('scroll', (hS))
+
+    // Add welcome message
+    let filterWelcome = document.getElementById('filter-welcome')
+    let capaWelcome = document.getElementById('capa-welcome')
+    let welcome = document.getElementById('welcome')
+    filterWelcome.addEventListener('mousemove', hi)
+    function hi() {
+        capaWelcome.style.display = 'flex'
+        welcome.style.display = 'flex'
+        filterWelcome.classList.add('show-a')
+        document.body.classList.add('overflow-hidden');
+    setTimeout(function() {
+        filterWelcome.style.display = 'none'
+        filterWelcome.classList.add('show-r')
+        document.body.classList.remove('overflow-hidden');
+    }, 2000);
+}
