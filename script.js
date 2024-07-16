@@ -65,15 +65,15 @@ function showTapHTML() {
     }
 
     // Hidden side rigth
-    let filterBody = document.getElementById('filter-body')
+    let portfolioContent = document.getElementById('portfolio-content')
      let containerPortfolio = document.getElementById('portfolio')
      let hR = function hiddeSideR() {
          containerPortfolio.classList.add('container-portfolio')
          containerPortfolio.classList.add('container-portfolio-animation')
      }
-     filterBody.addEventListener('mousemove', (hR), { once: true })
+     portfolioContent.addEventListener('mousemove', (hR), { once: true })
 
-    // Add styles nav
+    // Add style filter blur to nav
     let navHome = document.getElementById('nav-home')
     let hS = function addStylesNav() {
         if (window.scrollY > 1) {
@@ -86,6 +86,10 @@ function showTapHTML() {
     window.addEventListener('scroll', (hS))
 
     // Add animation welcome message
+    let filterWelcome = document.getElementById('filter-welcome')
+    let capaWelcome = document.getElementById('capa-welcome')
+    let welcome = document.getElementById('welcome')
+    let hiddenContent = document.getElementById('hidden-content')
     document.addEventListener("DOMContentLoaded", () => {
         if (!localStorage.getItem("visited")) {
             capaWelcome.style.display = 'flex'
@@ -105,22 +109,4 @@ function showTapHTML() {
         }
 
     });
-    let filterWelcome = document.getElementById('filter-welcome')
-    let capaWelcome = document.getElementById('capa-welcome')
-    let welcome = document.getElementById('welcome')
-    let hiddenContent = document.getElementById('hidden-content')
-    // filterWelcome.addEventListener('mousemove', hi)
-    // function hi() {
-    //     capaWelcome.style.display = 'flex'
-    //     welcome.style.display = 'flex'
-    //     filterWelcome.classList.add('show-a')
-    //     document.body.classList.add('overflow-hidden');
-    //     hiddenContent.style.display = 'none'
-    // setTimeout(function() {
-    //     filterWelcome.style.display = 'none'
-    //     filterWelcome.classList.add('show-r')
-    //     document.body.classList.remove('overflow-hidden');
-    //             hiddenContent.style.display = 'block'
-    // }, 2000);
-// }
 
