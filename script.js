@@ -65,12 +65,13 @@ function showTapHTML() {
     }
 
     // Hidden side rigth
+    let filterBody = document.getElementById('filter-body')
      let containerPortfolio = document.getElementById('portfolio')
      let hR = function hiddeSideR() {
          containerPortfolio.classList.add('container-portfolio')
          containerPortfolio.classList.add('container-portfolio-animation')
      }
-    window.addEventListener('mousemove', (hR))
+     filterBody.addEventListener('mousemove', (hR), { once: true })
 
     // Add styles nav
     let navHome = document.getElementById('nav-home')
@@ -84,7 +85,7 @@ function showTapHTML() {
     }
     window.addEventListener('scroll', (hS))
 
-    // Add welcome message
+    // Add animation welcome message
     let filterWelcome = document.getElementById('filter-welcome')
     let capaWelcome = document.getElementById('capa-welcome')
     let welcome = document.getElementById('welcome')
@@ -100,3 +101,4 @@ function showTapHTML() {
         document.body.classList.remove('overflow-hidden');
     }, 2000);
 }
+
