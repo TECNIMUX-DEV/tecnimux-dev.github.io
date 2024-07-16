@@ -467,11 +467,12 @@ font-size: 4rem;
 }
 .forward-right img {
   display: inline-flex;
-  height: 2.3rem;
+  height: 2.8rem;
   width: auto;
   margin: 0 1rem;
   margin-bottom: -0.5rem;
-  filter: drop-shadow(0 0 0.2rem #ffff);
+  background-color: transparent;
+  filter: drop-shadow(0 0 10rem #ffff);
 }
 
 #skills {
@@ -496,6 +497,7 @@ font-size: 4rem;
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
   width: auto;
   gap: 1rem;
 }

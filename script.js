@@ -89,16 +89,19 @@ function showTapHTML() {
     let filterWelcome = document.getElementById('filter-welcome')
     let capaWelcome = document.getElementById('capa-welcome')
     let welcome = document.getElementById('welcome')
+    let hiddenContent = document.getElementById('hidden-content')
     filterWelcome.addEventListener('mousemove', hi)
     function hi() {
         capaWelcome.style.display = 'flex'
         welcome.style.display = 'flex'
         filterWelcome.classList.add('show-a')
         document.body.classList.add('overflow-hidden');
+        hiddenContent.style.display = 'none'
     setTimeout(function() {
         filterWelcome.style.display = 'none'
         filterWelcome.classList.add('show-r')
         document.body.classList.remove('overflow-hidden');
+                hiddenContent.style.display = 'block'
     }, 2000);
 }
 
