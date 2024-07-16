@@ -86,22 +86,41 @@ function showTapHTML() {
     window.addEventListener('scroll', (hS))
 
     // Add animation welcome message
+    document.addEventListener("DOMContentLoaded", () => {
+        if (!localStorage.getItem("visited")) {
+            capaWelcome.style.display = 'flex'
+            welcome.style.display = 'flex'
+            filterWelcome.classList.add('show-a')
+            document.body.classList.add('overflow-hidden');
+            hiddenContent.style.display = 'none'
+        setTimeout(function() {
+            filterWelcome.style.display = 'none'
+            filterWelcome.classList.add('show-r')
+            document.body.classList.remove('overflow-hidden');
+            hiddenContent.style.display = 'block'
+        }, 2000);
+        localStorage.setItem("visited", "true");
+        } else {
+             filterWelcome.style.display = 'none'
+        }
+
+    });
     let filterWelcome = document.getElementById('filter-welcome')
     let capaWelcome = document.getElementById('capa-welcome')
     let welcome = document.getElementById('welcome')
     let hiddenContent = document.getElementById('hidden-content')
-    filterWelcome.addEventListener('mousemove', hi)
-    function hi() {
-        capaWelcome.style.display = 'flex'
-        welcome.style.display = 'flex'
-        filterWelcome.classList.add('show-a')
-        document.body.classList.add('overflow-hidden');
-        hiddenContent.style.display = 'none'
-    setTimeout(function() {
-        filterWelcome.style.display = 'none'
-        filterWelcome.classList.add('show-r')
-        document.body.classList.remove('overflow-hidden');
-                hiddenContent.style.display = 'block'
-    }, 2000);
-}
+    // filterWelcome.addEventListener('mousemove', hi)
+    // function hi() {
+    //     capaWelcome.style.display = 'flex'
+    //     welcome.style.display = 'flex'
+    //     filterWelcome.classList.add('show-a')
+    //     document.body.classList.add('overflow-hidden');
+    //     hiddenContent.style.display = 'none'
+    // setTimeout(function() {
+    //     filterWelcome.style.display = 'none'
+    //     filterWelcome.classList.add('show-r')
+    //     document.body.classList.remove('overflow-hidden');
+    //             hiddenContent.style.display = 'block'
+    // }, 2000);
+// }
 
