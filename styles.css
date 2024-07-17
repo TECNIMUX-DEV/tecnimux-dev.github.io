@@ -59,6 +59,7 @@ nav {
   top: 0;
   margin: 0 auto;
   z-index: 1;
+  background-color: red;
 }
 .nav-style {
   background-color: rgba(255, 255, 255, 0.01);
@@ -297,7 +298,7 @@ font-size: 4rem;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
-  margin: 3rem 0;
+  margin: 4rem 0;
   padding: 0 2.5rem;
   box-shadow: 0 0 0.1rem #ffffff1c;
 }
@@ -320,10 +321,28 @@ font-size: 4rem;
   padding: 20px;
   border-radius: 50%;
   filter: drop-shadow(5px 5px 0.1rem rgba(22, 22, 22, 0.2));
-  padding: 0.5rem;
   box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
 }
-
+.container-video {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  padding: 20px;
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 1rem #634092);
+  box-shadow: 0 0 10rem rgba(255, 255, 255, 0.1);
+}
+.container-video video {
+  width: 200%;
+  height: 150%;
+  object-fit: cover; /* Cubre completamente el contenedor */
+  position: absolute; /* Posicionamiento absoluto para cubrir el contenedor */
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .port-home h1 {
   text-align: center;
   font-size: 5rem;
@@ -333,6 +352,82 @@ font-size: 4rem;
   -webkit-background-clip: text;
   padding: 2rem;
   filter: drop-shadow(0 0 0.1rem #000);
+}
+.space-name {
+ padding-top: 1rem;
+}
+.container-state {
+  position: relative;
+  height: auto;
+  max-width: 40%;
+  border-radius: 20px;
+  background-color: rgba(27, 27, 27, 0.747);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  margin: 1rem;
+  padding: 1rem;
+  margin:  auto;
+}
+.container-state h2 {
+  font-size: 1rem;
+  font-weight: 100;
+  box-shadow: 0 0.3px 0 #fff;
+  padding-left: 1rem;
+  width: 100%;
+  padding-top: 5px;
+  animation: state 5s linear forwards;
+}
+.info-state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  padding: 0.3rem 1rem;
+}
+.state {
+  background-color: rgb(11, 179, 11, 0.3);
+  box-shadow: 0 0 1rem rgba(0, 128, 0, 0.377);
+  border-radius: 5px;
+  padding: 5px;
+}
+.state h3 {
+  color: rgb(100, 248, 100);
+  font-size: 1rem;
+}
+.code {
+  position: relative;
+  background-color: rgb(41, 41, 41);
+  color: #fff;
+  overflow: hidden;
+}
+.filter-code {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  animation: code 1s ease infinite;
+}
+@keyframes state {
+  0% {
+    width: 0%;
+  }
+  90% {
+    width: 100%;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes code {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+    display: none;
+  }
 }
 /* .data-home h2 {
     /* background-color: #ccc;
