@@ -384,7 +384,7 @@ font-size: 4rem;
   height: 100%;
   max-width: 100%;
   padding: 0.3rem 1rem;
-}
+} 
 .state {
   background-color: rgb(11, 179, 11, 0.3);
   box-shadow: 0 0 1rem rgba(0, 128, 0, 0.377);
@@ -395,19 +395,6 @@ font-size: 4rem;
   color: rgb(100, 248, 100);
   font-size: 1rem;
 }
-.code {
-  position: relative;
-  background-color: rgb(41, 41, 41);
-  color: #fff;
-  overflow: hidden;
-}
-.filter-code {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  animation: code 1s ease infinite;
-}
 @keyframes state {
   0% {
     width: 0%;
@@ -417,17 +404,31 @@ font-size: 4rem;
     opacity: 0;
   }
   100% {
-    visibility: hidden;
+    opacity: 1;
+   display: none;
   }
 }
-@keyframes code {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-    display: none;
-  }
+.code {
+  position: relative;
+  height: auto;
+  width: auto;
+}
+.code-insert {
+  font-family: monospace;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden; 
+  border-right: 3px solid; /* Simula el cursor */
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
 }
 /* .data-home h2 {
     /* background-color: #ccc;
