@@ -487,7 +487,7 @@ font-size: 4rem;
     #140d1e
   );
   background-size: 500% 500%;
-  animation: borderAnimation 5s linear infinite;
+  animation: borderAnimation 10s linear forwards;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 165, 0, 0.5),
     0 0 10px rgba(255, 255, 0, 0.5), 0 0 10px rgba(0, 128, 0, 0.5),
     0 0 10px rgba(75, 0, 130, 0.5), 0 0 10px rgba(238, 130, 238, 0.5);
@@ -787,7 +787,7 @@ font-size: 4rem;
   margin: 2rem;
   font-weight: 400;
 }
-.description-sobre-mi {
+.description-about-me {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -798,7 +798,7 @@ font-size: 4rem;
   padding: 1rem;
   margin: 3rem;
 }
-.description-sobre-mi p {
+.description-about-me  p {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 200;
@@ -1013,7 +1013,39 @@ font-size: 4rem;
     font-size: 1rem;
   }
   .port-home h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1rem;
+  }
+  .description-about-me {
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+  .description-about-me  p {
+    font-size: 0.5rem;
+  }
+  .port-sentence {
+    padding: 1rem;
+    margin: 0 3rem;
+    margin: auto;
+    font-size: 0.7rem;
+  }
+  .container-state {
+    padding: 0.8rem;
+    margin:  auto;
+  }
+  .container-state h2 {
+    font-size: 0.5rem;
+    padding-left: 0rem;
+    width: 50%;
+    padding-top: 0px;
+  }
+  .info-state {
+    padding: 0.3rem 0.5rem;
+  } 
+  .state h3 {
+    font-size: 0.5rem;
+  }
+  .code-insert {
+    font-size: 0.5rem;
   }
 }
