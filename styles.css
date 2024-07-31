@@ -282,8 +282,6 @@ font-size: 4rem;
 
   }
 }
-
-
 .data-home {
   display: flex;
   justify-content: space-around;
@@ -988,21 +986,21 @@ font-size: 4rem;
   nav li {
     font-size: 0.6rem;
   }
+  .data-home {
+    height: 100px;
+    margin: 1rem 0;
+    padding: 0 2.5rem;
+    box-shadow: 0 0 0.1rem #ffffff1c;
+  }
   .container-video {
     position: absolute;
-    width: 160px;
-    height: 160px;
-    overflow: hidden;
-    border-radius: 50%; /* Hace que el contenedor sea circular */
-    padding: 20px 20px 20px 5px;
-    border-radius: 50%;
-    filter: drop-shadow(5px 5px 1rem #634092);
-    box-shadow: 0 0 10rem rgba(255, 255, 255, 0.1);
-    left: -20px;
+    width: 70px;
+    height: 70px;
+    margin-left: -20px;
   }
   .container-video video {
-    width: 200%;
-    height: 150%;
+    width: 250%;
+    height: 200%;
     object-fit: cover; /* Cubre completamente el contenedor */
     position: absolute; /* Posicionamiento absoluto para cubrir el contenedor */
     top: 45%;
