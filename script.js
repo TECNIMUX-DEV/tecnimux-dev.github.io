@@ -77,13 +77,13 @@ function showTapHTML() {
     window.addEventListener('scroll', (hS))
 
         // Hidden side rigth
-        let portfolioContent = document.getElementById('portfolio-content')
-        let containerPortfolio = document.getElementById('portfolio')
-        let hR = function hiddeSideR() {
-            containerPortfolio.classList.add('container-portfolio')
-            containerPortfolio.classList.add('container-portfolio-animation')
-        }
-        portfolioContent.addEventListener('mousemove', (hR), { once: true })
+        // let portfolioContent = document.getElementById('portfolio-content')
+        // let containerPortfolio = document.getElementById('portfolio')
+        // let hR = function hiddeSideR() {
+        //     containerPortfolio.classList.add('container-portfolio')
+        //     containerPortfolio.classList.add('container-portfolio-animation')
+        // }
+        // portfolioContent.addEventListener('mousemove', (hR), { once: true })
 
         // Add space to name 
         let nameMe = document.getElementById('name-me')
