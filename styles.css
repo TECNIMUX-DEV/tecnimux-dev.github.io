@@ -50,16 +50,16 @@ nav a {
   list-style: none;
 }
 nav {
-  height: 3rem;
   position: sticky;
+  top: 0;
+  height: auto;
   width: 65%;
   display: flex;
   justify-content: end;
   align-items: center;
-  top: 0;
   margin: 0 auto;
   z-index: 1;
-  background-color: red;
+  background-color: transparent;
 }
 .nav-style {
   background-color: rgba(255, 255, 255, 0.01);
@@ -69,8 +69,8 @@ nav {
 
 nav ul {
   display: flex;
-  margin: 1rem;
-  gap: 8px;
+  margin: 0.1rem;
+  gap: 10px;
   font-weight: 400;
 }
 li {
@@ -149,6 +149,7 @@ font-size: 4rem;
   text-align: center;
   box-shadow: 0px 0.3px 0px 0px #fff;
   margin-left: 10px;
+  display: none;
 }
 #languages {
   display: none;
@@ -216,7 +217,7 @@ font-size: 4rem;
 
 .vertical-line {
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 2px;
   background-color: #fff;
   left: 0;
@@ -258,11 +259,6 @@ font-size: 4rem;
 .container-portfolio-animation {
   animation: tatL 0.5s ease-in-out forwards;
   animation-delay: 1s;
-}
-@media screen and (max-width: 1000px) {
-  #portfolio {
-    width: 80%;
-  }
 }
 
 #portfolio-content {
@@ -359,7 +355,6 @@ font-size: 4rem;
 .container-state {
   position: relative;
   height: auto;
-  max-width: 40%;
   border-radius: 20px;
   background-color: rgba(27, 27, 27, 0.747);
   backdrop-filter: blur(20px);
@@ -862,11 +857,10 @@ font-size: 4rem;
   margin: -5px;
 }
 #projects {
-  width: 100%;
+  width: 100vw;
 }
 
 #projects h2 {
-  margin: 2rem;
   font-weight: 400;
 }
 
@@ -875,9 +869,7 @@ font-size: 4rem;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap-reverse;
-  gap: 1rem;
   text-align: center;
-  margin: 2rem;
   border-radius: 20px;
 }
 .rotate-side {
@@ -886,22 +878,23 @@ font-size: 4rem;
 .title-project {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  width: 450px;
-  background-color: rgba(255, 255, 255, 0.4);
+  height: 200px;
+  width: 250px;
+  background-color: rgba(255, 255, 255);
   font-size: 3rem;
   text-align: center;
   align-items: center;
+  font-size: 1rem;
 }
 .project {
-  height: 500px;
-  width: 700px;
+  height: 300px;
+  width: 300px;
   background-color: rgb(10, 10, 10);
   border-radius: 0.5rem;
 }
 .project p {
   font-family: "Teachers";
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: #fff;
 }
 .project strong {
@@ -912,20 +905,16 @@ font-size: 4rem;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.37);
   border-radius: 1.5rem;
-  font-size: 2rem;
-  padding: 1rem;
 }
 .description-project {
-  font-size: 1.3rem;
+  font-size: 0.5rem;
   font-weight: 100;
-  padding: 1rem;
 }
 #font-dater {
   background-color: rgba(70, 62, 70, 0.336);
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
 .font-dater {
   font-family: "DATER";
@@ -967,14 +956,64 @@ font-size: 4rem;
   background-color: #0c0c0c;
   text-align: center;
   justify-content: center;
-  border-bottom-left-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 #font-planer h3 {
   font-family: "PLANER";
   color: red;
 }
 .descp-t {
-  font-size: 1rem;
+  font-size: 0.5rem;
   flex-direction: column;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+  #home {
+    width: 100vw;
+  }
+  #portfolio {
+    width: 100vw;
+  }
+  nav {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 100vw;
+    justify-content: start;
+    align-items: center;
+  }
+  nav ul {
+    gap: 2px;
+  }
+  nav li {
+    font-size: 0.6rem;
+  }
+  .container-video {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    padding: 20px 20px 20px 5px;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 1rem #634092);
+    box-shadow: 0 0 10rem rgba(255, 255, 255, 0.1);
+    left: -20px;
+  }
+  .container-video video {
+    width: 200%;
+    height: 150%;
+    object-fit: cover; /* Cubre completamente el contenedor */
+    position: absolute; /* Posicionamiento absoluto para cubrir el contenedor */
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .link-underline {
+    font-size: 1rem;
+  }
+  .port-home h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
 }
