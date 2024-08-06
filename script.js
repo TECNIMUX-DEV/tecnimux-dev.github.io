@@ -59,10 +59,10 @@
 // }
 //     window.addEventListener('click', (hT))
 
-    function removeBoxContentSkill() {
-        contentSkill.style.display = 'none';
-        contentSkillHTML.style.display = 'none';
-    }
+    // function removeBoxContentSkill() {
+    //     contentSkill.style.display = 'none';
+    //     contentSkillHTML.style.display = 'none';
+    // }
 
     // Add style filter blur to nav
     let navHome = document.getElementById('nav-home')
@@ -116,4 +116,8 @@
         }
 
     });
+    filterWelcome.addEventListener('click', () => {
+        filterWelcome.style.display = 'none';
+        document.body.classList.remove('overflow-hidden');
+    })
 
