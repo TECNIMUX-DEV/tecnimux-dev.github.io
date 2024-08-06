@@ -51,6 +51,19 @@
 //     contentSkillHTML.style.display = 'block';
 //     }
 
+
+// Click on skills
+// let hT = function HiddenShowTap() {
+//     contentSkill.style.display = 'none';
+//     contentSkillHTML.style.display = 'none';
+// }
+//     window.addEventListener('click', (hT))
+
+    function removeBoxContentSkill() {
+        contentSkill.style.display = 'none';
+        contentSkillHTML.style.display = 'none';
+    }
+
     // Add style filter blur to nav
     let navHome = document.getElementById('nav-home')
     let hS = function addStylesNav() {

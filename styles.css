@@ -141,6 +141,9 @@ button {
 .welcome h2 {
 font-size: 4rem;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 #language {
   top: 0;
   left: 0;
@@ -382,7 +385,7 @@ font-size: 4rem;
   border-radius: 5px;
   padding: 5px;
 }
-.state h3 {
+.state p {
   color: rgb(100, 248, 100);
   font-size: 0.7rem;
 }
