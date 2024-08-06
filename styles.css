@@ -65,8 +65,8 @@ nav {
   background-color: transparent;
 }
 .nav-style {
-  background-color: rgba(255, 255, 255, 0.01);
-  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 
@@ -77,7 +77,6 @@ nav ul {
   font-weight: 400;
 }
 li {
-  background-color: #ffffff0c;
   padding: 3px 10px;
   border-radius: 8px;
   margin-top: 10px; 
@@ -260,19 +259,10 @@ font-size: 4rem;
   animation-delay: 1s;
 }
 .container-portfolio-animation {
-  animation: tatL 0.5s ease-in-out forwards;
+  animation: tatL 0.5s ease-in-out infinite;
   animation-delay: 1s;
 }
 
-#portfolio-content {
-  background-color: #00000015;
-  backdrop-filter: blur(3px);
-  padding: 1rem 0;
-}
-/* #home:hover {
-  box-shadow: 
-  10px 0px 0px -5px rgb(255, 0, 0);
-} */
 @keyframes tat {
   to {
     box-shadow: -10px 0px 10px -5px rgb(255, 255, 255, 0.2), /* sombra en el lado izquierdo */ 
@@ -356,24 +346,18 @@ font-size: 4rem;
  padding-top: 1rem;
 }
 .container-state {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
+  flex-wrap: wrap;
   height: auto;
   border-radius: 20px;
   background-color: rgba(27, 27, 27, 0.747);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  margin: 1rem;
-  padding: 1rem;
-  margin:  auto;
-}
-.container-state h2 {
-  font-size: 1rem;
-  font-weight: 100;
-  box-shadow: 0 0.3px 0 #fff;
-  padding-left: 1rem;
-  width: 100%;
-  padding-top: 5px;
-  animation: state 5s linear forwards;
+  margin: 2rem;
 }
 .info-state {
   display: flex;
@@ -385,13 +369,13 @@ font-size: 4rem;
 } 
 .state {
   background-color: rgb(11, 179, 11, 0.3);
-  box-shadow: 0 0 1rem rgba(0, 128, 0, 0.377);
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.377);
   border-radius: 5px;
   padding: 5px;
 }
 .state h3 {
   color: rgb(100, 248, 100);
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 @keyframes state {
   0% {
@@ -410,6 +394,7 @@ font-size: 4rem;
   position: relative;
   height: auto;
   width: auto;
+  padding-right: 20px;
 }
 .code-insert {
   font-family: monospace;
@@ -460,17 +445,26 @@ font-size: 4rem;
 .port-sentence {
   position: relative;
   z-index: 3;
-  width: 90%;
-  font-size: 1.3rem;
-  color: #000;
-  padding: 2rem;
+  width: 85%;
+  padding: 70px 120px 30px 120px;
   border-radius: 20px;
-  margin: 1rem 3rem;
   margin: auto;
-  text-align: center;
   overflow: hidden;
+  clip-path: polygon(0 50%, 50% 0, 100% 50%, 100% 50%, 70% 100%, 30% 100%, 0 50%);
+ box-shadow: 0 0 50px #fff;
+ background: linear-gradient(#64409283, #0000008c);
+ border-top: 30px solid #000;
+ border-bottom: 10px solid #fff;
 }
-.port-sentence::before {
+.port-sentence p {
+  font-size: 1rem;
+  color: #fff;
+  padding: 10px 50px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+
+}
+/*.port-sentence::before {
   width: 100%;
   z-index: -1;
   content: "";
@@ -499,15 +493,17 @@ font-size: 4rem;
 .port-sentence::after {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
-  right: 3px;
-  bottom: 3px;
+  top:    2px;
+  left:   2px;
+  right:  2px;
+  bottom: 2px;
   border-radius: 20px;
-  background-color: rgba(20, 20, 20, 0.95);
+  background: linear-gradient(70deg, #634092, rgba(26, 26, 26));
   backdrop-filter: blur(200px);
   z-index: -1;
-}
+  clip-path: polygon(0 50%, 50% 0, 100% 50%, 100% 50%, 70% 100%, 30% 100%, 0 50%);
+  box-shadow: 0 0 20px #fff;
+} 
 
 @keyframes borderAnimation {
   0% {
@@ -528,6 +524,7 @@ font-size: 4rem;
     box-shadow: 10px 10px 1rem orange;
   }
 }
+  */
 
 .data-head {
   position: relative;
@@ -1002,12 +999,6 @@ max-width: 10px;
   nav li {
     font-size: 0.6rem;
   }
-  .data-home {
-    height: 100px;
-    margin: 1rem 0;
-    padding: 0 2.5rem;
-    box-shadow: 0 0 0.1rem #ffffff1c;
-  }
   .container-video {
     position: absolute;
     width: 140px;
@@ -1026,40 +1017,12 @@ max-width: 10px;
   .link-underline {
     font-size: 1rem;
   }
-  .port-home h1 {
-    font-size: 2rem;
-    padding: 1rem;
-  }
+
   .description-about-me {
     padding: 0.5rem;
     margin: 1rem;
   }
   .description-about-me  p {
-    font-size: 0.5rem;
-  }
-  .port-sentence {
-    padding: 1rem;
-    margin: 0 3rem;
-    margin: auto;
-    font-size: 0.7rem;
-  }
-  .container-state {
-    padding: 0.8rem;
-    margin:  auto;
-  }
-  .container-state h2 {
-    font-size: 0.5rem;
-    padding-left: 0rem;
-    width: 50%;
-    padding-top: 0px;
-  }
-  .info-state {
-    padding: 0.3rem 0.5rem;
-  } 
-  .state h3 {
-    font-size: 0.5rem;
-  }
-  .code-insert {
     font-size: 0.5rem;
   }
 }
