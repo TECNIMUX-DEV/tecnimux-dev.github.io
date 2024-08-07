@@ -88,6 +88,12 @@ li:active {
 button {
   cursor: pointer;
 }
+.destacado {
+  color: #634092;
+  text-wrap: pretty;
+  text-shadow: 2px 5px 10px #000;
+  
+}
 .filter {
   display: flex;
   justify-content: center;
@@ -269,10 +275,9 @@ font-size: 4rem;
   flex-direction: column;
   width: 65%;
   margin: 0 auto;
-  background-color: #0000001f;
+  background-color: rgba(26, 26, 26, 0.5);
   /* background-color: #fff; */
   backdrop-filter: blur(4px);
-  box-shadow: 10px 0px 10px -5px rgb(255, 255, 255, 0.1); /* sombra en el lado derecho */
 }
 /* .container-portfolio {
   animation: tat 0.5s ease-in-out forwards;
@@ -302,11 +307,10 @@ font-size: 4rem;
   align-items: center;
   width: 100%;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1); 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   margin: 6.5rem 0 0 0;
-  box-shadow: 0 0 0.3px #000;
+  /* background-color: rgb(0, 255, 179); */
+  background-color: rgba(100, 64, 146, 0.5);
+  box-shadow: 0.3rem 0.5rem rgba(255, 255, 255, 0.15);
 }
 .container-avatar {
   height: 180px;
@@ -383,9 +387,7 @@ font-size: 4rem;
   height: 100%;
   max-width: 100%;
   padding: 0.3rem 1.2rem;
-  background-color: rgba(27, 27, 27, 0.747); 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: radial-gradient( #0c0c0c4d, rgba(0, 0, 0, 0.432)); 
   border-radius: 5px;
 } 
 
@@ -439,15 +441,23 @@ font-size: 4rem;
   from, to { border-color: transparent; }
   50% { border-color: #634092; }
 }
-.data-home h2 a {
-    font-family: Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
-    text-decoration: none;
-    } 
 
-.data-home span {
-  opacity: 0.8;
+.redirect-site {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #00000031, #64409200);
+}
+.redirect-site h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-size: 7rem;
+    } 
+    .redirect-site a {
+      text-decoration: none;
+      } 
+
+.redirect-site span {
+  opacity: 0.6;
 } 
 .port-home {
   height: auto;
@@ -506,8 +516,8 @@ font-size: 4rem;
   padding: 5px;
   background: linear-gradient(
     90deg,
-    #140d1e,
-    #634092,
+    rgb(20, 13, 30, 0.7),
+    rgb(99, 64, 146, 0.7),
     #ee82ee1f,
     #2d1d42
   );
@@ -601,15 +611,14 @@ font-size: 4rem;
   margin: 2rem 0;
 }
 
-.learned {
+#learned {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
   gap: 10px;
   background-color: transparent;
   box-shadow: inset 5px 0 0 #fff;
@@ -715,8 +724,9 @@ font-size: 4rem;
   margin-top: auto;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 15px;
   background-color: rgb(255, 18, 57);
+  box-shadow: inset 5px 0 0 rgb(0, 255, 179);
 }
 
 #contact {
