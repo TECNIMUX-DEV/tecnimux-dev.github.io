@@ -65,16 +65,16 @@
     // }
 
     // Add style filter blur to nav
-    let navHome = document.getElementById('nav-home')
-    let hS = function addStylesNav() {
-        if (window.scrollY > 1) {
-            navHome.classList.add('nav-style')
-    }
-    else {
-        navHome.classList.remove('nav-style')
-    }
-    }
-    window.addEventListener('scroll', (hS))
+    // let navHome = document.getElementById('nav-home')
+    // let hS = function addStylesNav() {
+    //     if (window.scrollY > 1) {
+    //         navHome.classList.add('nav-style')
+    // }
+    // else {
+    //     navHome.classList.remove('nav-style')
+    // }
+    // }
+    // window.addEventListener('scroll', (hS))
 
         // Hidden side rigth
         // let portfolioContent = document.getElementById('portfolio-content')
