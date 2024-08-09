@@ -118,6 +118,7 @@ textarea:focus-visible {
 }
 #btn-contact {
 border: none;
+margin: 40px;
 padding: 20px;
 background: linear-gradient(rgb(45, 29, 66, 0.6), rgb(22, 22, 22, 0.6));
 font-size: 1.3rem;
@@ -169,11 +170,17 @@ margin-top: 40px;
   background-color: transparent;
 }
 }
+.welcome p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  font-weight: bold;
+  color: #634092;
+  text-shadow: 0 0 #080808;
+}
 .welcome h2 {
 font-size: 4rem;
-}
-.overflow-hidden {
-  overflow: hidden;
 }
 #language {
   top: 0;
@@ -281,6 +288,9 @@ font-size: 4rem;
   background-color: #fff;
   left: 0;
   margin: 1rem;
+}
+.hidden-content {
+  display: none;
 }
 .filter-body {
   z-index: -1;
@@ -835,12 +845,12 @@ font-size: 1.2rem;
   margin: auto;
   background-color: #000;
   padding-top: 30px;
-  padding: 50px;
+  padding: 150px 50px;
 }
 .container-form {
   display: flex;
-  height: 700px;
-  width: 700px;
+  height: 70%;
+  width: 70%;
   justify-content: start;
   align-items: center;
   flex-direction: column;
