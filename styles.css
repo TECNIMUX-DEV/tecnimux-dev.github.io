@@ -1184,6 +1184,13 @@ animation: topBom 3s ease-in;
   .descrip-project p {
     font-size: 0.6rem;
   }
+  .items-learned {
+    height: auto;
+  }
+  .learn-item h3 {
+    position: relative;
+    padding-top: 0;
+  }
   .port-home h1 {
     font-size: 4rem;
   }
