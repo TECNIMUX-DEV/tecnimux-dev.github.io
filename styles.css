@@ -282,13 +282,14 @@ font-size: 4rem;
   left: 0;
   height: 40px;
   width: 40px;
-  margin: 20px;
+  margin: 25px;
   background-color: transparent;
   display: none;
 }
 #open-menu-responsive img {
 height: auto;
 width: 40px;
+box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
 }
 #capa-all-nav {
   z-index: 1;
@@ -1181,5 +1182,11 @@ animation: topBom 3s ease-in;
   }
   .cert p {
     font-size: 1rem;
+  }
+  #contact {
+    padding: 50px 20px ;
+  }
+  .container-form {
+    width: 100%;
   }
 }
