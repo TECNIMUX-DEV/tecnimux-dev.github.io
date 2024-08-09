@@ -125,4 +125,23 @@ newMessage.addEventListener('click', () => {
     newMessage.style.borderRight = "none";
 })
 
+// Add menu responsive
+let navHome = document.getElementById('nav-home');
+let openMenuResponsive = document.getElementById('open-menu-responsive');
+let capaAllNav = document.getElementById('capa-all-nav');
+openMenuResponsive.addEventListener('click',  () => {
+openMenuResponsive.style.display = 'none';
+navHome.style.display = 'block';
+capaAllNav.style.display = 'block';
+document.body.classList.add('overflow-hidden');
+document.body.style.overflow = 'hidden';
+});
+capaAllNav.addEventListener('click', () => {
+    navHome.style.display = 'none';
+    capaAllNav.style.display = 'none';
+    document.body.classList.remove('overflow-hidden');
+    document.body.style.overflow = 'auto';
+    openMenuResponsive.style.display = 'block';
+})
+
 

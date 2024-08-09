@@ -272,6 +272,59 @@ font-size: 4rem;
   /* background-color: #fff; */
   background-color: transparent;
   margin: 0 auto;
+  z-index: 3;
+}
+
+#open-menu-responsive {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  margin: 20px;
+  background-color: transparent;
+  display: none;
+}
+#open-menu-responsive img {
+height: auto;
+width: 40px;
+}
+#capa-all-nav {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(8, 8, 8, 0.555);
+  backdrop-filter: blur(4px);
+  display: none;
+  overflow: hidden;
+}
+@media screen and ( max-width:1000px ) {
+  #nav-home {
+    position: absolute;
+    display: block;
+    background-color: #634092;
+    display: none;
+    overflow: hidden;
+  }
+  #open-menu-responsive {
+    display: block;
+  }
+  #nav-items {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    padding-bottom: 80px;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+  #nav-items li {
+  font-size: 2rem;
+  }
 }
 .home {
   position: absolute;
@@ -877,6 +930,12 @@ text-wrap: pretty;
   gap: 15px;
   margin: 20px;
 }
+.cert:hover {
+  opacity: 0.9;
+}
+.cert:active {
+  transform: scale(0.99);
+}
 .cert p {
 font-size: 1.2rem;
 }
@@ -1096,65 +1155,31 @@ animation: topBom 3s ease-in;
 
 
 /* Responsive */
-/* @media screen and (max-width: 1300px) {
-  #home {
-    width: 100%;
-  }
+@media screen and (max-width: 1000px ) {
   #portfolio {
-    width: 100%;
-  }
-  nav {
-    position: relative;
-justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  nav ul {
-    gap: 2px;
-  }
-  nav li {
-    font-size: 0.8rem;
+    width: 100vw;
   }
   .data-home {
-    height: 100px;
+    display: block;
   }
   .container-video {
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    margin-left: -50px;
+    height: 100px;
+    width: 100px;
   }
-  .container-video video {
-    width: 250%;
-    height: 200%;
-    object-fit: cover; /* Cubre completamente el contenedor 
-    position: absolute; /* Posicionamiento absoluto para cubrir el contenedor 
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .redirect-site h2 {
+    font-size: 3vmax;
   }
-  .link-underline {
-    font-size: 1rem;
+  .project {
+    height: 150px;
+    width: 300px;
   }
-
-  .description-about-me {
-    padding: 0.5rem;
-    margin: 1rem;
-  }
-  .description-about-me  p {
-    font-size: 0.5rem;
+  .descrip-project p {
+    font-size: 0.6rem;
   }
   .port-home h1 {
-    font-size: xx-large;
+    font-size: 4rem;
   }
-  .port-sentence p {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  .cert p {
+    font-size: 1rem;
   }
-  .data-home h2 a {
-font-size: 1.5rem;
-    } 
-} */
+}
