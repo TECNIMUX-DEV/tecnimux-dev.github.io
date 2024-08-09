@@ -88,42 +88,49 @@ button {
   cursor: pointer;
 }
 input {
-  color: #000;
-  margin: 20px;
-  padding: 5px;
+  color: #ffffffbb;
+  margin: 10px 20px;
+  padding: 10px;
   border: none;
   background-color: transparent;
   outline: none;
   border-radius: 10px;
-  background-color: #1f1f1f38;
+  background-color: #94949438;
   backdrop-filter: blur(20px);
 }
 input:focus {
-  box-shadow: 0 0 20px rgba(44, 44, 44, 0.1);
+  box-shadow: 0 0 2px #634092;
 }
 textarea {
-  color: #000;
+  color: #fff;
   font-size: 1rem;
   height: 240px;
   width: 100%;
-  padding: 5px;
+  margin-top: 15px;
+  padding: 10px;
   border: none;
-  background-color: #1f1f1f38;
+  border-radius: 5px;
+  background-color: rgba(31, 31, 31, 0.5 );
   backdrop-filter: blur(20px);
   outline: none;
-  border-radius: 10px;
+  resize: none;
 }
 textarea:focus-visible {
-  box-shadow: 0 0 20px rgba(44, 44, 44, 0.1);
+  box-shadow: 0 0 2px #634092;
 }
 #btn-contact {
-border: none;
-margin: 40px;
-padding: 20px;
-background: linear-gradient(rgb(45, 29, 66, 0.6), rgb(22, 22, 22, 0.6));
-font-size: 1.3rem;
-border-radius: 10px;
-margin-top: 40px;
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+  font-size: 1.3rem;
+  margin: 40px 0;
+  background-color: transparent;
+}
+#btn-contact:hover {
+  opacity: 0.9;
+}
+#btn-contact:active {
+  transform: scale(0.99);
 }
 .destacado {
   color: #634092;
@@ -324,6 +331,7 @@ font-size: 4rem;
   background-color: rgba(26, 26, 26, 0.5);
   /* background-color: #fff; */
   backdrop-filter: blur(4px);
+  margin-bottom: 40px;
 }
 /* .container-portfolio {
   animation: tat 0.5s ease-in-out forwards;
@@ -504,6 +512,10 @@ font-size: 4rem;
   from { width: 0; }
   to { width: 100%; }
 }
+@keyframes typing-contact {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
@@ -518,7 +530,7 @@ font-size: 4rem;
 .redirect-site h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 900;
-    font-size: 7rem;
+    font-size: 5vmax;
     } 
     .redirect-site a {
       text-decoration: none;
@@ -699,10 +711,57 @@ flex-direction: column;
 margin: 25px;
 }
 .project {
-  height: 480px;
+  position: relative;
+  height: 500px;
+  width: 800px;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+.title-project {
+  transition: 0.5s linear;
+}
+.project:hover .title-project {
+  font-size: 2rem;
+}
+.project:hover {
+  box-shadow: 0 0 5px rgb(255, 255, 255, 0.2);
+}
+.descrip-project {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
+}
+.descrip-project p {
+color: #fff;
+font-weight: 600;
+font-size: 1.3rem;
+margin: 10px;
+padding-left: 40px;
+text-wrap: pretty;
+}
+.p-preview img {
+  z-index: -2;
+  position: absolute;
+  height: 100%;
   width: 100%;
-  background-color: firebrick;
-  border-radius:5px;
+}
+.filter-on-project {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.tecnologies-use {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
 }
 #learned {
   display: flex;
@@ -843,26 +902,69 @@ font-size: 1.2rem;
   flex-wrap: wrap;
   flex-direction: column;
   margin: auto;
-  background-color: #000;
-  padding-top: 30px;
-  padding: 150px 50px;
+  background-color: rgb(0, 0, 0, 0.2 );
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0 0 5rem #237c12;
+  padding: 100px 50px;
+}
+#contact h2 {
+  padding-bottom: 50px;
 }
 .container-form {
+  position: relative;
   display: flex;
   height: 70%;
   width: 70%;
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  background-color: #555555ee;
+  background-color: rgba(182, 182, 182, 0.075);
+  backdrop-filter: blur(100px);
   border-radius: 5px;
+  box-shadow: 0 0 0.5rem rgba(27, 27, 27, 0.4);
 }
 .container-form h3 {
   display: flex;
   width: 100%;
   padding: 5px 5px 5px 10px;
-  font-weight: 200;
-  box-shadow: 0 0.5px 0 #000;
+  font-weight: 100;
+  box-shadow: 0 0.5px 0 #fff;
+  font-family: monospace;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden; 
+  border-right: 1.5px solid; /* Simula el cursor */
+  text-shadow: 1px 0 #000;
+  cursor: text;
+/* animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite; */
+}
+.container-form h3 span {
+  border-right: 1.5px solid; /* Simula el cursor */
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+.container-form h3:hover {
+opacity: 0.5;
+}
+.container-form:hover #caret {
+animation-play-state: paused;
+}
+#show-contact {
+  display: none;
+  overflow: hidden;
+}
+.animation-show-contact {
+animation: topBom 3s ease-in;
+}
+@keyframes topBom {
+  from {
+    height: 0%;
+    top: 0;
+    opacity: 0;
+  }
+  to {
+  height: 100%;
+  opacity: 1;
+  }
 }
 .for {
   display: flex;
@@ -870,9 +972,11 @@ font-size: 1.2rem;
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(255, 0, 0, 0.247);
+  background-color: #634092;
   backdrop-filter: blur(5px);
   margin-top: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .for img {
   height: 50px;
@@ -893,12 +997,21 @@ font-size: 1.2rem;
 .camp {
   height: auto;
   width: 100%;
-  background-color: #fff;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+.camp-name {
+  padding-top: 40px;
+}
+.camp-why {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .camp p {
   font-weight: bolder;
-  padding: 10px;
-  color: #000;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  color: #fff;
 }
 
 

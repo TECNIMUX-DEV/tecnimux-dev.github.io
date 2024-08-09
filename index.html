@@ -116,9 +116,44 @@
 <section id="projects">
   <h2>Proyectos</h2>
   <div class="container-projects">
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
+<!-- BTWO TWCH -->
+    <div class="project">
+      <a href="https://btwotech.netlify.app/" target="_blank">
+      <div class="p-preview">
+        <div class="filter-on-project"></div>
+        <img src="img/images-of-projects/Btwo-tech-home.PNG" 
+        alt="Imagen de compañia BTWO TECH">
+      </div>
+      <div class="descrip-project">
+          <p class="title-project">SPA de compañia tecnologica BTWO TECH</p>
+          <p>Proyecto haciendo uso de diferentes herramientas con un responsive completo.</p>
+        <div class="tecnologies-use">
+          <p>CSS</p>
+          <p>JS</p>
+          <p>HTML</p>
+        </div>
+      </div>
+    </div>
+<!-- NETWORK-CJBO -->
+    <div class="project">
+      <a href="https://network-cjbo.netlify.app/" target="_blank">
+      <div class="p-preview">
+        <div class="filter-on-project"></div>
+        <img src="img/images-of-projects/Network-CJBO-section.png" 
+        alt="Imagen de configuración de red CJBO">
+      </div>
+      <div class="descrip-project">
+          <p class="title-project">WEB APLICATION de configuracion de redes internas del instituto educativo CJBO.</p>
+          <p>Proyecto haciendo uso de javascript intensivo.</p>
+        <div class="tecnologies-use">
+          <p>CSS</p>
+          <p>JS</p>
+          <p>HTML</p>
+        </div>
+      </div>
+    </div>
+  </a>
+    <!-- <div class="project"></div> -->
   </div>
 </section>
   <section id="learned">
@@ -130,21 +165,21 @@
           <img src="logos-tech/HTML.png" alt="Imagen HTML5">
         <h3>HTML5</h3>
         </div>
-        <p>Maquetar con semántica, conservar sintaxis y estructurar el código. 🧐📄</p>
+        <p>Domino este lenguaje y conservo detalles como maquetar con semántica, sintaxis correcta y estructurar el código. 🧐📄</p>
       </div>
       <div class="items-learned">
         <div class="learn-item">
           <img src="logos-tech/CSS3_logo_and_wordmark.svg.png" alt="Imagen CSS3">
         <h3>CSS3</h3>
         </div>
-        <p>Puedo construir interfaces (UI), lograr una excelente (UX) y todo desde 0. 📐🤓</p>
+        <p>Puedo construir interfaces (UI) y lograr una excelente experiencia de usuario. 📐🤓</p>
       </div>
       <div class="items-learned">
         <div class="learn-item">
           <img src="logos-tech/Unofficial_JavaScript_logo_2.svg.png" alt="Imagen Javascript">
         <h3>JAVASCRIPT</h3>
         </div>
-        <p>Puedo construir interfaces (UI), lograr una excelente (UX) y todo desde 0. 📐🤓</p>
+        <p>Puedo crear sitios web complejos haciendo uso de tecnologias modernas. 📐</p>
       </div>
 
       <!-- <div class="icons-imgs" onmousemove='showTapHTML()' onmouseout="removeBoxContentSkill()"><img src="logos-tech/HTML.png" alt=""><p>HTML</p></div>
@@ -187,12 +222,12 @@
       </div>
       <div class="cert">
         <img src="navegation/icons8-link-24.png" alt="Diplomado DISEÑO DIGITAL" class="cert-imgs">
+        <p><span id="date-formacion">2024/</span>Curso desarrollo WEB Udemy +25H</p>
+      </div> 
+      <div class="cert">
+        <img src="navegation/icons8-link-24.png" alt="Diplomado DISEÑO DIGITAL" class="cert-imgs">
         <p><span id="date-formacion">2024/</span>Curso de Ingles B1 Atenea +150Horas</p>
       </div>
-      <!-- <div class="cert">
-        <img src="navegation/icons8-link-24.png" alt="Diplomado DISEÑO DIGITAL" class="cert-imgs">
-        <p>Diplomado en diseño digital +120Horas</p>
-      </div> -->
       <div class="cert">
         <img src="navegation/icons8-link-24.png" alt="Diplomado DISEÑO DIGITAL" class="cert-imgs">
         <p><span id="date-formacion">2023/</span>Diplomado Diseño digital Politecnico de Colombia +120Horas</p>
@@ -341,27 +376,29 @@
  <section id="contact">
   <h2>Contactarme</h2>
   <div class="container-form">
-    <h3>Nuevo mensaje</h3>
+    <h3 id="new-message">Mensaje nuevo<span id="caret"></span></h3>
+    <div id="show-contact">
+      <div class="container-camps">
     <div class="for">
       <div class="icon-for">
         <img src="logo/4.png" alt="TECNIMUX">
       </div>
         <p>TECNIMUX</p>
     </div>
-    <div class="camp">
+    <div class="camp camp-name">
       <p>nombre<input type="text" placeholder="¿Cómo te llamas?" required></p>
 
     </div>
     <div class="camp">
-      <p>correo<input type="text" placeholder="Aquí tu Email" required></p>
+      <p>correo<input type="email" placeholder="Aquí tu Email" required></p>
     </div>
-      <div class="camp">
-
+      <div class="camp camp-why">
         <p>Dime por qué me quieres contactar<textarea name="text-contact" id="text" placeholder="Hola un gusto! Te escucho..."></textarea></p>
       </div>
-
+    </div>
       <button id="btn-contact" type="submit">Contactar</button>
   </div>
+</div>
  </section>
 </section>
   </body>

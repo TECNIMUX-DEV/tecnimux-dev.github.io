@@ -113,3 +113,16 @@
         }
     });
 
+// Add animation contact
+let showContact = document.getElementById('show-contact');
+let caret = document.getElementById('caret');
+let newMessage = document.getElementById('new-message');
+newMessage.addEventListener('click', () => { 
+    showContact.style.display = 'block';
+    showContact.classList.add('animation-show-contact');
+    caret.style.animationPlayState = 'paused';
+    caret.style.opacity = '0';
+    newMessage.style.borderRight = "none";
+})
+
+
