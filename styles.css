@@ -1174,6 +1174,13 @@ animation: topBom 3s ease-in;
     height: 150px;
     width: 300px;
   }
+  .tecnologies-use {
+    gap: 0;
+    padding: 0;
+  }
+  .project:hover .title-project {
+    font-size: 0.7rem;
+  }
   .descrip-project p {
     font-size: 0.6rem;
   }
