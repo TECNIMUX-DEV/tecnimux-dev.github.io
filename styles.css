@@ -21,6 +21,12 @@
   font-family: "PLANER";
   src: url(fonts/SpotMonkey-zLO0.ttf);
 }
+html {
+    /* background: radial-gradient(circle at top right, rgb(24, 24, 24), #634092); */
+    background-image: url(/img/Cuadrícula-H.png);
+    font-family: "Teachers", sans-serif;
+    object-fit: cover;
+}
 
 body {
   width: 100%;
@@ -29,11 +35,14 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0 10rem 0;
   backdrop-filter: blur(200px);
   -webkit-backdrop-filter: blur(200px);
-  background: radial-gradient(circle at top right, rgb(24, 24, 24), #634092);
+  /* background: radial-gradient(circle at top right, rgb(24, 24, 24), #634092); */
+  background-image: url(/img/Cuadrícula-H.png);
   font-family: "Teachers", sans-serif;
+  object-fit: cover;
+  background-color: #000;
 }
 
 section {
@@ -405,33 +414,14 @@ box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
   flex-wrap: wrap;
   flex-direction: column;
   width: 65%;
+  max-width: 1300px;
   margin: 0 auto;
-  background-color: rgba(26, 26, 26, 0.5);
-  /* background-color: #fff; */
   backdrop-filter: blur(4px);
   margin-bottom: 40px;
+  background-color: transparent;
+  box-shadow: 0 0 1px rgba(204, 204, 204, 0.664);
+  border-radius: 5px;
 }
-/* .container-portfolio {
-  animation: tat 0.5s ease-in-out forwards;
-  animation-delay: 1s;
-}
-.container-portfolio-animation {
-  animation: tatL 0.5s ease-in-out infinite;
-  animation-delay: 1s;
-} */
-
-/* @keyframes tat {
-  to {
-    box-shadow: -10px 0px 10px -5px rgb(255, 255, 255, 0.2), /* sombra en el lado izquierdo 
-    10px 0px 10px -5px rgb(255, 255, 255, 0.2); /* sombra en el lado derecho 
-  }
-}
-@keyframes tatL {
-  to {
-    box-shadow: -10px 0px 10px -5px rgb(255, 255, 255, 0.2); /* sombra en el lado izquierdo  
-
-  }
-} */
 .data-home {
   display: flex;
   justify-content: space-around;
@@ -519,31 +509,28 @@ box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
   align-items: center;
   gap: 10px;
   padding: 15px;
-}
-.state img {
-  height: auto;
-  width: 35px;
-  max-width: 35px;
-  border-radius: 5px;
-  padding: 3px;
-}
-.state svg {
+
+  & svg {
   animation: tik 1s ease-in-out infinite both;
   animation-delay: 4s;
+  }
+
+  & p {
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+  }
+  
+}
 }
 @keyframes tik {
   to {
     stroke: rgba(0, 255, 64, 0.5);
     filter: drop-shadow( 0 0 1rem rgba(0, 255, 64, 0.9));
   }
-}
-.state p {
-  color: #fff;
-  font-size: 1rem;
-  transition: 0.3s ease;
-}
-.state p:hover {
-  color: #634092;
 }
 @keyframes state {
   0% {
@@ -1259,7 +1246,7 @@ animation: topBom 3s ease-in;
 /* Responsive */
 @media screen and (max-width: 1000px ) {
   #portfolio {
-    width: 100%;
+    width: 90%;
   }
   .data-home {
     display: block;
