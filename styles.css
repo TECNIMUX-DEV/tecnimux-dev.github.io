@@ -40,6 +40,7 @@ body {
   -webkit-backdrop-filter: blur(200px);
   /* background: radial-gradient(circle at top right, rgb(24, 24, 24), #634092); */
   background-image: url(/img/Cuadrícula-H.png);
+  background-attachment: fixed;
   font-family: "Teachers", sans-serif;
   object-fit: cover;
   background-color: #000;
@@ -749,21 +750,16 @@ box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
   user-select: none;
 }
 
-#skills {
-  width: 100%;
-  margin-top: auto;
-  margin: 2rem 0;
-}
 #projects {
-position: relative;
-height: auto;
-width: 100%;
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-background-color: transparent;
-box-shadow: inset 5px 0 0 hotpink;
-padding: 15px;
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: transparent;
+  box-shadow: inset 5px 0 0 hotpink;
+  padding: 15px;
 }
 .container-projects {
 display: flex;
@@ -841,15 +837,13 @@ text-wrap: pretty;
 
   .container-techs {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+
     flex-wrap: wrap;
     margin: 1rem;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     /* background-color: rgba(26, 26, 26, 0.5); */
     background-color: rgba(177, 177, 177, 0.1);
+    overflow: hidden;
 
     & img {
       width: 100px;
@@ -857,14 +851,24 @@ text-wrap: pretty;
       filter: drop-shadow(0 -2px 0 #000);
       padding-top: 2.5rem;
       user-select: none;
-      transition: all 0.5s;
+      transition: all 0.7s;
+      filter: contrast(0.1);
 
         &:hover {
-          filter: drop-shadow(0 -2px 0 #fff);
+          filter: drop-shadow(0 -1px 0 #ffffff31);
           transform: scale(1.1);
           transition: all 0.5s;
         }
       }
+    }
+    .tech {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 2rem;
     }
 
     @media  screen and (max-width: 1000px) {
@@ -872,41 +876,40 @@ text-wrap: pretty;
         gap: 5px;
       }
     }
-    .light {
-      position: relative;
-      height: 130px;
-      width: 100%;
+    #light {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translate(50%, -50%);
+      height: auto;
+      width: 50px;
       display: flex;
-      justify-content: end;
-      /* background-color: red; */
+      justify-content: center;
+      align-items: center;
       padding-bottom: 1rem;
-      filter: drop-shadow( 0 150px 2rem #fff);
+      filter: drop-shadow( 0 150px 2rem #fff) contrast(0.5);
       overflow: hidden;
+      margin-top: -1rem;
 
-      & img {
-        position: absolute;
-        top: -80px;
-        right: 60px;
-        height: auto;
-        width: 50px;
 
         &:hover {
-          transform: translateY(40px);
+          transform: translateY(40px) translate(50%, -50%);
+          right: 50%;
           /* filter:drop-shadow( 0 50px 1rem #fff); */
-          overflow: auto;
-          z-index: 1;
         }
       }
-
     }
-  .explain {
+  .skills {
     display: flex;
     justify-content: center;
     align-items: start;
     gap: 10px;
     flex-wrap: wrap;
     padding: 2rem;
-    background-color: rgba(26, 26, 26, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0.1px 0.5px 2rem rgba(255, 255, 255, 0.123);
+
 
     & p {
       flex: 1 1 30%;
@@ -916,18 +919,18 @@ text-wrap: pretty;
       color: #fff;
       box-shadow: 0 0 2px #bdbdbd38;
       border-radius: 5px;
-      background-color: rgba(177, 177, 177, 0.01);
+      background-color: rgba(177, 177, 177, 0.062);
       backdrop-filter:  blur(5px);
       transition: all 0.5s;
 
       &:hover {
         z-index: 1;
-        box-shadow: 0 0 .4rem #fff;
+        box-shadow: 0 0 .1rem #fff;
         transform: scale(1.1);
       }
     }
 }
-}
+
 .design {
   display: flex;
   justify-content: center;
@@ -977,7 +980,7 @@ text-wrap: pretty;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   /* background-color: #2b282e; */
   box-shadow: inset 5px 0 0 #b56fff,
   6px 0 1rem #00000056;
@@ -1048,10 +1051,10 @@ text-wrap: pretty;
   font-size: .7rem;
   padding: .5rem;
   border-radius: 5px;
-  /* box-shadow: 0 0 2px #634092; */
 }
 
 #contact {
+  z-index: 2;
   position: relative;
   height: auto;
   width: 100%;
@@ -1060,15 +1063,56 @@ text-wrap: pretty;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: auto;
-  background-color: transparent;
-  /* box-shadow: inset 0 0 5rem #237c12; */
-  margin: 2rem 0;
+  margin-top: 1rem;
   padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+    45deg,
+    #e81416,
+    #ffa500, 
+    #faeb36,
+    #79c314, 
+    #487de7, 
+    #4b369d, 
+    #70369d,
+    #e81416,
+    #ffa500, 
+    #faeb36,
+    #79c314, 
+    #487de7, 
+    #4b369d, 
+    #70369d);
+    animation: bg-translate 40s linear infinite both;
+
+    & h2 {
+      width: 100%;
+      text-align: start;
+      }
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000ee;
+    padding: 4rem;
+    border-radius: 10px;
+  }
+
 }
-#contact h2 {
-  width: 100%;
-  text-align: start;
+@keyframes bg-translate {
+0%{
+  background-size: 100% 100%;
+}
+100%{
+  background-size: 340% 770%;
+}
+
+
 }
 .container-form {
   position: relative;
@@ -1082,21 +1126,21 @@ text-wrap: pretty;
   backdrop-filter: blur(1px);
   border-radius: 5px;
   box-shadow: 0 0 0.5rem rgba(27, 27, 27, 0.4);
-}
-.container-form h3 {
-  display: flex;
-  width: 100%;
-  padding: 5px 5px 5px 10px;
-  font-weight: 100;
-  box-shadow: 0 0.5px 0 #696969;
-  font-family: monospace;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden; 
-  border-right: 1.5px solid; /* Simula el cursor */
-  text-shadow: 1px 0 #000;
-  cursor: text;
-/* animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite; */
+
+   & h3 {
+    display: flex;
+    width: 100%;
+    padding: 5px 5px 5px 10px;
+    font-weight: 100;
+
+    font-family: monospace;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-shadow: 1px 0 #000;
+    cursor: text;
+    /* animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite; */
+  }
 }
 .caret {
   border-right: 1.5px solid; /* Simula el cursor */
@@ -1287,13 +1331,10 @@ animation: topBom 3s ease-in;
   .port-home h1 {
     font-size: 4rem;
   }
-  .cert p {
-    padding: 1rem;
-  }
   .container-form {
     width: 100%;
   }
-  .explain {
+  .skills {
     flex-direction: column;
   }
 }
