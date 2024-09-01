@@ -49,12 +49,6 @@ body {
 section {
   width: 95%;
 }
-h2 {
-  font-weight: 400;
-  margin: 10px;
-  color: #fff;
-}
-
 strong {
   color: #000;
 }
@@ -640,12 +634,12 @@ box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
 
 } */
 .port-sentence p {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #fff;
-  padding: 10px;
   text-align: center;
   text-wrap: pretty;
   text-shadow: 2px 5px 10px #000;
+  padding: .5rem 0;
 }
 .port-sentence::before {
   content: "";
@@ -657,7 +651,6 @@ box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
   right: -5px;
   bottom: -5px;
   border-radius: 20px;
-  padding: 5px;
   
   background: linear-gradient(
     90deg,
@@ -723,8 +716,8 @@ box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
 
 .qtn {
   text-align: center;
-  margin: 4rem 2.5rem 0;
-  padding: 1rem;
+  margin: 2rem;
+  padding-top: 1rem;
   user-select: none;
 }
 .qtn p {
@@ -757,71 +750,90 @@ box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: transparent;
+  gap: 20px;
+  background-color: red;
   box-shadow: inset 5px 0 0 hotpink;
-  padding: 15px;
+  padding: 1rem;
 }
 .container-projects {
-display: flex;
-justify-content: space-around;
-align-items: center;
-gap: 20px;
-flex-wrap: wrap;
-flex-direction: column;
-margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .project {
   position: relative;
-  height: 500px;
-  width: 800px;
+  height: auto;
+  width: 90%;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.2s ease-in-out;
-}
-.title-project {
-  transition: 0.5s linear;
-}
-.project:hover .title-project {
-  font-size: 2rem;
-}
-.project:hover {
-  box-shadow: 0 0 5px rgb(255, 255, 255, 0.2);
-}
-.descrip-project {
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: start;
-  flex-direction: column;
-}
-.descrip-project p {
-color: #fff;
-font-weight: 600;
-font-size: 1.3rem;
-margin: 10px;
-padding-left: 40px;
-text-wrap: pretty;
-}
-.p-preview img {
-  z-index: -2;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+
+  .descrip-project {
+    z-index: 1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 3rem 1rem;
+  
+      & h2 {
+       font-size: 3rem;
+       color: #fff;
+       transition: all 0.5s;
+       padding: 10px 0;
+      } 
+    }
+
+    & img {
+      z-index: -2;
+      height: 100%;
+      width: 100%;
+    }
+
+    & p {
+      color: #d4d4d4;
+      font-weight: 300;
+      text-wrap: pretty;
+      font-size: 1rem;
+    }
+
+    &:hover h2 {
+      font-size: 2rem;
+    }
 }
 .filter-on-project {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .tecnologies-use {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: fit-content;
   width: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 15px;
-  padding: 20px;
+  padding: 5px;
+  padding-right: 15px;
+  background-color: #3a3a3a2c;
+  backdrop-filter: blur(5px);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  & p {
+    color: #fff;
+    font-weight: 100;
+  }
 }
 #stack {
   display: flex;
@@ -859,6 +871,14 @@ text-wrap: pretty;
           transform: scale(1.1);
           transition: all 0.5s;
         }
+      }
+
+      @media screen and (max-width: 1000px) {
+        & img {
+          height: 60px;
+          width: 60px;
+        }
+        
       }
     }
     .tech {
@@ -1057,14 +1077,16 @@ text-wrap: pretty;
   z-index: 2;
   position: relative;
   height: auto;
-  width: 100%;
+  width: 65%;
+  max-width: 1300px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 1rem;
-  padding: 2rem;
+  margin: auto;
+
+  padding: 1rem;
   border-radius: 10px;
   border: 1px solid transparent;
   background: linear-gradient(
@@ -1099,7 +1121,6 @@ text-wrap: pretty;
     height: 100%;
     width: 100%;
     background-color: #000000ee;
-    padding: 4rem;
     border-radius: 10px;
   }
 
@@ -1314,22 +1335,21 @@ animation: topBom 3s ease-in;
   .redirect-site h2 {
     font-size: 3vmax;
   }
-  .project {
-    height: 150px;
-    width: 300px;
-  }
-  .tecnologies-use {
-    gap: 0;
-    padding: 0;
-  }
-  .project:hover .title-project {
-    font-size: 0.7rem;
-  }
-  .descrip-project p {
-    font-size: 0.6rem;
-  }
   .port-home h1 {
     font-size: 4rem;
+  }
+  #projects {
+
+      & h2 {
+       font-size: .8rem;
+      } 
+      & p {
+        font-size: .4rem;
+      }
+  
+      &:hover h2 {
+        font-size: .6rem;
+      }
   }
   .container-form {
     width: 100%;
@@ -1337,4 +1357,5 @@ animation: topBom 3s ease-in;
   .skills {
     flex-direction: column;
   }
+
 }
