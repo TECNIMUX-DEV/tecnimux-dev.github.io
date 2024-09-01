@@ -73,12 +73,6 @@ nav a {
   text-decoration: none;
   list-style: none;
 }
-.nav-style {
-  background-color: rgba(255, 255, 255, 0.11);
-  backdrop-filter: blur(5px);
-  z-index: 1;
-}
-
 nav ul {
   display: flex;
   margin: 5px;
@@ -136,6 +130,14 @@ textarea {
 }
 textarea:focus-visible {
   box-shadow: 0 0 2px #634092;
+}
+.overflow-hidden {
+  overflow-y: hidden;
+}
+.nav-style {
+  background-color: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(5px);
+  z-index: 1;
 }
 
 #btn-contact {
@@ -297,34 +299,31 @@ font-size: 4rem;
   z-index: 3;
 }
 
-#open-menu-responsive {
-  z-index: 3;
+#btn-open-menu-responsive {
+  z-index: 1;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 35px;
+  left: 35px;
   height: 40px;
   width: 40px;
-  margin-left: 20px;
-  padding: 30px;
   background-color: transparent;
   display: none;
 
+  & img {
+    height: auto;
+    width: 30px;
+    box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
 
-}
-#open-menu-responsive img {
-  height: auto;
-  width: 30px;
-  box-shadow: 0.3rem 0.2rem rgb(99, 64, 146, 0.7) ;
-
-  &:hover {
-    animation: borderAnimation 5s linear forwards;
-    transform: scale(1.1);
-    box-shadow: 0 0 1rem #5e3b8d,
-    .3rem 0.2rem #fff ;
+    &:hover {
+      animation: borderAnimation 5s linear forwards;
+      transform: scale(1.1);
+      box-shadow: 0 0 1rem #5e3b8d,
+      .3rem 0.2rem #fff ;
+    }
   }
 }
 @media screen and (pointer: coarse) {
-  #open-menu-responsive img {
+  #btn-open-menu-responsive img {
 
     &:hover {
       animation: borderAnimation 5s linear forwards;
@@ -335,15 +334,15 @@ font-size: 4rem;
   }
 }
 
-#capa-all-nav {
+#shadow-close-nav {
   z-index: 1;
   position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(8, 8, 8, 0.555);
   backdrop-filter: blur(4px);
   display: none;
-  overflow: hidden;
 }
 @media screen and ( max-width:1000px ) {
   #nav-home {
@@ -352,9 +351,8 @@ font-size: 4rem;
     display: block;
     background-color: #634092;
     display: none;
-    overflow: hidden;
   }
-  #open-menu-responsive {
+  #btn-open-menu-responsive {
     display: block;
   }
   #nav-items {
@@ -366,7 +364,6 @@ font-size: 4rem;
     flex-direction: column;
     padding-bottom: 80px;
     margin-right: 10px;
-    overflow: hidden;
   }
   #nav-items li {
   font-size: 1.5rem;

@@ -85,14 +85,14 @@
         // }
         // portfolioContent.addEventListener('mousemove', (hR), { once: true })
 
-    // Add space to name 
+// Add space to name 
         let nameMe = document.getElementById('name-me')
         let forwardRight = document.getElementById('forward-right').addEventListener('click', () => {
             nameMe.classList.add('space-name');
         });
         
 
-    // Add animation welcome message
+// Add animation welcome message
         let filterWelcome = document.getElementById('filter-welcome');
         let capaWelcome = document.getElementById('capa-welcome');
         let welcome = document.getElementById('welcome');
@@ -127,21 +127,19 @@
 
 // Add menu responsive
     let navHome = document.getElementById('nav-home');
-    let openMenuResponsive = document.getElementById('open-menu-responsive');
-    let capaAllNav = document.getElementById('capa-all-nav');
-    
-    openMenuResponsive.addEventListener('click',  () => {
-    openMenuResponsive.style.display = 'none';
+    let btnOpenMenuResponsive = document.getElementById('btn-open-menu-responsive');
+    let shadowCloseNav = document.getElementById('shadow-close-nav');
+
+    btnOpenMenuResponsive.addEventListener('click',  () => {
     navHome.style.display = 'block';
-    capaAllNav.style.display = 'block';
+    shadowCloseNav.style.display = 'block';
     document.body.classList.add('overflow-hidden');
     });
-    capaAllNav.addEventListener('click', () => {
+
+    shadowCloseNav.addEventListener('click', () => {
         navHome.style.display = 'none';
-        capaAllNav.style.display = 'none';
+        shadowCloseNav.style.display = 'none';
         document.body.classList.remove('overflow-hidden');
-        document.body.style.overflow = 'auto';
-        openMenuResponsive.style.display = 'block';
     })
 
 
