@@ -487,7 +487,7 @@ font-size: 4rem;
   filter: drop-shadow(0 0 10px #fff);
 }
 .space-name {
- padding-top: 1rem;
+ padding-top: 2rem;
 }
 .container-state {
   position: relative;
@@ -579,20 +579,21 @@ font-size: 4rem;
 .redirect-site {
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, #00000031, #64409200);
-}
-.redirect-site h3 {
+  background: linear-gradient(90deg, #00000031, #64409200); 
+  
+  & h3 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 900;
-    font-size: 5vmax;
+    font-size: 5rem;
     } 
     .redirect-site a {
       text-decoration: none;
       } 
 
-.redirect-site span {
-  opacity: 0.6;
-} 
+  .redirect-site span {
+    opacity: 0.6;
+  } 
+}
 
 .port-sentence {
   position: relative;
@@ -751,7 +752,6 @@ font-size: 4rem;
   display: flex;
   justify-content: space-around;
   align-items: center; 
-  /* flex-direction: column; */
   gap: 5px;
   flex-wrap: wrap;
 
@@ -763,7 +763,7 @@ font-size: 4rem;
 .project {
   position: relative;
   height: auto;
-  width: 45%;
+  width: 500px;
   margin: 0 auto;
   background-color: transparent;
   border-radius: 10px;
@@ -784,6 +784,7 @@ font-size: 4rem;
   
       & h3 {
        font-size: 1.1rem;
+       font-weight: 300;
        color: #fff;
        transition: all 0.5s;
        padding: 10px 0;
@@ -806,6 +807,7 @@ font-size: 4rem;
     &:hover h3 {
       font-size: 1.5rem;
     }
+
 }
 .filter-on-project {
   z-index: 1;
@@ -837,6 +839,8 @@ font-size: 4rem;
     font-weight: 100;
   }
 }
+
+/* Stack */
 #stack {
   display: flex;
   flex-direction: column;
@@ -910,13 +914,20 @@ font-size: 4rem;
       margin-top: -1rem;
 
 
-        &:hover {
+        &:active {
           transform: translateY(40px) translate(50%, -50%);
           right: 50%;
           /* filter:drop-shadow( 0 50px 1rem #fff); */
         }
+
+        &:hover ~ .tech img {
+          filter: contrast(1);
+        }
       }
-    }
+  }
+  /* img:has(.tech) {
+
+  } */
   .skills {
     display: flex;
     justify-content: center;
@@ -1048,7 +1059,9 @@ font-size: 4rem;
   }
 }
 .cert:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+  left: 0;
+  transform: translate(10px, 0);
 }
 .cert:active {
   transform: scale(0.99);
@@ -1330,7 +1343,7 @@ animation: topBom 3s ease-in;
     width: 150px;
   }
   .redirect-site h3 {
-    font-size: 3vmax;
+    font-size: 2rem;
   }
    h1 {
     font-size: 2rem;
@@ -1341,7 +1354,6 @@ animation: topBom 3s ease-in;
     .project {
       width: 100%;
    
-
       & h3 {
        font-size: .7rem;
        padding: 5px 0;
